@@ -1,0 +1,51 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 90%;
+}
+
+.top-page-padding {
+  padding-top: 30px;
+}
+
+.btn-primary {
+  background-color:rgba(223, 105, 27, 1) !important;  
+  border-color: rgba(223, 105, 27, 1) !important;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-secondary {
+  background-color:rgb(173, 119, 83) !important;
+  border-color: rgb(173, 119, 83) !important;
+  margin-left: 10px;
+}
+
+.btn-primary:hover {
+  background-color: rgb(218, 143, 94) !important;
+  border-color: rgb(218, 143, 94) !important;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(168, 136, 114) !important;
+  border-color: rgb(168, 136, 114)  !important;
+}
+
+.btn-primary:active, .btn-primary:focus:active, .btn-secondary:active, .btn-secondary:focus:active {
+  background-color: rgb(221, 177, 147) !important;
+  text-shadow: 0px 0px 3px rgb(221, 177, 147) !important;
+  outline-color: rgb(221, 177, 147) !important;
+  box-shadow: rgb(221, 177, 147) !important;
+}
+
+.btn-primary:focus, .btn-secondary:focus{
+  box-shadow: 0px 0px 2px 2px #00000055 !important;
+  outline-color: #00000055 !important;
+}
+
+.form-control:focus {
+  box-shadow: 0px 0px 2px 2px #00000055  !important;
+  outline-color: #00000055 !important;
+  border-radius: 3px 3px 3px 3px;
+  border-color: #00000055;
+}

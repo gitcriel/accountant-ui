@@ -1,0 +1,40 @@
+.navbar-logo {
+  background-image: url('../common/assets/imageback.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+}
+
+.dropdown-menu {
+  background-color: #e38d28;
+}
+
+.dropdown-item {
+  color: white;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+.dropdown-item:hover {
+  background-color: #e4a053 !important;
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.1em !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.white-icon {
+  color: white;
+}
+
+.nav-item-fix {
+  padding-top: 1px;
+}
+
+.logo {
+  font-size: 2.5em;
+}

@@ -1,0 +1,113 @@
+.full-back {
+  background-image: url('../common/assets/imageback.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;  
+  background-size: 100% 1024px;
+  background-color: rgb(214, 124, 50);
+}
+
+.account-div {
+  height: 100%;
+  width: 100%;
+  color: white;
+  position: absolute;
+}
+
+.inner-panel {
+  margin-top: 70px;
+  padding: 40px;
+}
+
+.account-div label {
+  background-color: #BBBBBB66;
+  border-radius: 3px 3px 0 0;
+  padding: 3px 13px 1px 13px;
+  
+  color: white;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 0;
+}
+
+.account-div .form-control {
+  border-radius: 0 3px 3px 3px;
+  margin-top: 0;
+}
+
+.account-div .form-control:focus {
+  box-shadow: 0px 0px 2px 2px #00000033  !important;
+  border-radius: 3px 3px 3px 3px;
+  border-color: #00000033;
+}
+
+.account-div .btn-primary,.account-div .btn-secondary {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.account-div .btn-primary {
+  background-color: #333333AA !important;
+  border-color: #33333300 !important;
+  text-transform: uppercase;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.account-div .btn-secondary {
+  background-color: #666666AA !important;
+  border-color: #66666600 !important;
+  text-transform: uppercase;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-left: 10px;
+}
+
+.account-div .btn-primary:hover {
+  background-color: #666666FF !important;
+  border-color: #66666600  !important;
+}
+
+.account-div .btn-secondary:hover {
+  background-color: #666666FF !important;
+  border-color: #666666FF  !important;
+}
+
+.account-div .btn-primary:active, .account-div .btn-primary:focus:active, .account-div .btn-secondary:active, .account-div .btn-secondary:focus:active {
+  background-color: #EEEEEECC !important;
+  border-color: #EEEEEECC !important;
+  text-shadow: 0px 0px 3px #EEEEEECC !important;
+  outline-color: #EEEEEECC !important;
+  box-shadow: #EEEEEECC !important;
+}
+
+.account-div .btn-primary:focus, .account-div .btn-secondary:focus{
+  box-shadow: 0px 0px 2px 2px #00000055 !important;
+  outline-color: #00000055 !important;
+  box-shadow: #00000055 !important;
+}
+
+
+.account-div .spinner_panel {
+  color: white !important;
+}
+
+.account-div .alert-danger {
+  line-height: 15px;
+  color: white;
+  background-color: rgb(170, 64, 64, 0.7) !important;
+  padding-left: 15px;
+  border: 0px !important;
+  font-weight: 500 !important;
+}
+
+.account-div .btn-link {
+  color: white;
+}
+
+.account-div .logo {
+  font-size: 7em;
+}
