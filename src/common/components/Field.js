@@ -17,7 +17,7 @@ class Field extends Component {
   
   hasErrors(errorKey) {
     const { error } = this.props
-    return error != null && error.ModelState != null && error.ModelState[errorKey] != null
+    return error != null && error.fields != null && error.fields[errorKey] != null
   }
 
   render() {

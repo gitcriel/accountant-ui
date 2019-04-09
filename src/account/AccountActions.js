@@ -13,7 +13,7 @@ let accountActions = {
   
       accountService.login(data)
         .then(
-          data => dispatch(success(data.sessionToken, data.username)),
+          responseData => dispatch(success(responseData.sessionToken, data.username)),
           error => errorUtil.handleErrors(error, dispatch, actionTypes.LOGIN_FAILURE)
         )
     }
@@ -40,7 +40,7 @@ let accountActions = {
   
       accountService.register(data)
         .then(
-          data => dispatch(success(data.sessionToken, data.username)),
+          responseData => dispatch(success(responseData.sessionToken, data.username)),
           error => errorUtil.handleErrors(error, dispatch, actionTypes.REGISTER_FAILURE)
         )
     }
@@ -52,12 +52,6 @@ let accountActions = {
   },
   changePassword: (data) => {
     return dispatch => {
-      let validationError = validateChangePassword(data)
-      if(validationError) {
-        errorUtil.handleErrors(validationError, dispatch, actionTypes.CHANGE_PASSWORD_FAILURE)
-        return
-      }
-  
       dispatch({ type: actionTypes.CHANGE_PASSWORD_REQUEST })
   
       accountService.changePassword(data)
@@ -72,12 +66,6 @@ let accountActions = {
 function storeSessionData(token, username) {
   sessionStorage.setItem(config.SESSION_STORAGE_SESSION_TOKEN, token)
   sessionStorage.setItem(config.SESSION_STORAGE_USERNAME, username)
-}
-
-function validateChangePassword(data) {
-  if(data.oldPassword.trim() === '' || data.newPassword.trim() === '' || data.confirmPassword.trim() === '')
-    return {error:'AllPasswordFieldsRequired', description:'All password fields are required'}
-  return null
 }
 
 export default accountActions

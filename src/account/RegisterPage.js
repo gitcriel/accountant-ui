@@ -9,7 +9,6 @@ import Spinner from '../common/components/Spinner'
 import CenteredContainer from '../common/components/CenteredContainer'
 import SubmitButton from '../common/components/SubmitButton'
 import { Link } from 'react-router-dom'
-import Hashes from 'jshashes'
 import './AccountPage.css'
 
 class RegisterPage extends Component {
@@ -43,11 +42,7 @@ class RegisterPage extends Component {
     const { username, password, confirmPassword } = this.state
     const { dispatch } = this.props
 
-    let SHA1 = new Hashes.SHA1()
-    let passwordHash = SHA1.hex(password)
-    let confirmPasswordHash = SHA1.hex(confirmPassword)
-
-    dispatch(actions.register({username, password:passwordHash, confirmPassword:confirmPasswordHash}))
+    dispatch(actions.register({username, password, confirmPassword}))
     this.clearPassword()
   }
 
