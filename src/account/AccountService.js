@@ -10,7 +10,7 @@ export default {
     let passwordHash = data.password === '' ? '' : SHA1.hex(data.password)
     let confirmPasswordHash = data.confirmPassword === '' ? '' : SHA1.hex(data.confirmPassword)
 
-    service.post(config.URI.ACCOUNT, { username: data.username, password: passwordHash, confirmPassword: confirmPasswordHash })
+    return service.post(config.URI.ACCOUNT, { username: data.username, password: passwordHash, confirmPassword: confirmPasswordHash })
   },
 
   logout: () => service.erase(config.URI.SESSION),

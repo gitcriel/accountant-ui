@@ -81,7 +81,7 @@ function handleResponse(response) {
     if(response.ok) 
       return data
 
-      const error = data || response.statusText
-      return Promise.reject(error)
+    const error = data || response.statusText
+    return Promise.reject(error)
   })
 }
