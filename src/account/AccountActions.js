@@ -4,6 +4,9 @@ import config from '../config'
 import errorUtil from '../common/util/ErrorUtil'
 
 let accountActions = {
+  clearErrorsAndMessages: () => {
+    return dispatch => {dispatch({ type: actionTypes.CLEAR_ERRORS_AND_MESSAGES })}
+  },
   clearErrors: () => {
     return dispatch => {dispatch({ type: actionTypes.CLEAR_ERRORS })}
   },
@@ -26,13 +29,17 @@ let accountActions = {
   logout: (message) => {
     return dispatch => {
       accountService.logout()
-        .then(() => dispatch(success(message)),() => dispatch(success()))
+        .then(() => dispatch(success(message)),() => dispatch(success(message)))
     }
   
     function success(message) {
       sessionStorage.clear()
       return { type: actionTypes.LOGOUT, message }
     }
+  },
+  sessionExpired: (message) => {
+    sessionStorage.clear()
+    return { type: actionTypes.LOGOUT, message }
   },
   register: (data) => {
     return dispatch => {

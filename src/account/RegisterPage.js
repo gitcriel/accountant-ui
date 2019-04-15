@@ -23,7 +23,7 @@ class RegisterPage extends Component {
 
   componentWillMount() {
     document.body.className = 'full-back'
-    this.props.dispatch(actions.clearErrors())
+    this.props.dispatch(actions.clearErrorsAndMessages())
     this.logout()
   }
   

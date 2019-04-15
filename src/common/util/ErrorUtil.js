@@ -7,8 +7,8 @@ let errorUtil = {
       return
     }
 
-    if(error.Error === "Forbidden")
-      dispatch(accountActions.logout('Session has expired. Please login again.'))
+    if(error.error === "Forbidden")
+      dispatch(accountActions.sessionExpired('Session has expired. Please login again.'))
     else
       dispatch(failure(actionType, error))
   }

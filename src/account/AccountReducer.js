@@ -13,6 +13,12 @@ export default (state = initialState, action) => {
         ...state,
         error: null
       }
+    case actionTypes.CLEAR_ERRORS_AND_MESSAGES:
+      return {
+        ...state,
+        error: null,
+        message: null
+      }
     case actionTypes.REGISTER_REQUEST:
     case actionTypes.LOGIN_REQUEST:
       return {
