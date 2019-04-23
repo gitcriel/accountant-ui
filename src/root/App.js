@@ -1,9 +1,9 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-import RootRedirect from './RootRedirect'
-import Main from './Main'
-import Login from '../account/LoginPage'
-import Register from '../account/RegisterPage'
+import React from 'react';
+import {Route} from 'react-router-dom';
+import RootRedirect from './RootRedirect';
+import Main from './Main';
+import Login from '../account/LoginPage';
+import Register from '../account/RegisterPage';
 
 export default () => (
   <div>
@@ -12,4 +12,4 @@ export default () => (
     <Route path={`${process.env.PUBLIC_URL}/login`} component={Login} />
     <Route path={`${process.env.PUBLIC_URL}/register`} component={Register} />
   </div>
-)
+);

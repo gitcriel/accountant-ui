@@ -1,24 +1,25 @@
-import config from '../config'
-import actionTypes from './AccountActionTypes'
+import config from '../config';
+import actionTypes from './AccountActionTypes';
 
-let initialState = {}
-let sessionToken = sessionStorage.getItem(config.SESSION_STORAGE_SESSION_TOKEN)
-if (sessionToken)
-  initialState = { isLoggedIn: true }
+let initialState = {};
+const sessionToken = sessionStorage.getItem(config.SESSION_STORAGE_SESSION_TOKEN);
+if (sessionToken) {
+  initialState = {isLoggedIn: true};
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.CLEAR_ERRORS:
       return {
         ...state,
-        error: null
-      }
+        error: null,
+      };
     case actionTypes.CLEAR_ERRORS_AND_MESSAGES:
       return {
         ...state,
         error: null,
-        message: null
-      }
+        message: null,
+      };
     case actionTypes.REGISTER_REQUEST:
     case actionTypes.LOGIN_REQUEST:
       return {
@@ -27,49 +28,49 @@ export default (state = initialState, action) => {
         isSessionExpired: false,
         fetching: true,
         error: null,
-        message: null
-      }
+        message: null,
+      };
     case actionTypes.REGISTER_SUCCESS:
     case actionTypes.LOGIN_SUCCESS:
       return {
         ...state,
         fetching: false,
-        loggedIn: true
-      }
+        loggedIn: true,
+      };
     case actionTypes.REGISTER_FAILURE:
     case actionTypes.LOGIN_FAILURE:
       return {
         ...state,
         fetching: false,
-        error: action.error
-      }
+        error: action.error,
+      };
     case actionTypes.LOGOUT:
       return {
         ...state,
         sessionExpired: action.sessionExpired,
         saving: false,
         loggedIn: false,
-        message: action.message
-      }    
+        message: action.message,
+      };
     case actionTypes.CHANGE_PASSWORD_REQUEST:
       return {
         ...state,
         saving: true,
-        error: null
-      }
+        error: null,
+      };
     case actionTypes.CHANGE_PASSWORD_SUCCESS:
       return {
         ...state,
         saving: false,
-        error: null
-      }
+        error: null,
+      };
     case actionTypes.CHANGE_PASSWORD_FAILURE:
       return {
         ...state,
         saving: false,
-        error: action.error
-      }
+        error: action.error,
+      };
     default:
-      return state
+      return state;
   }
-}
+};

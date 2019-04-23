@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import './HeaderNav.css'
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import './HeaderNav.css';
 
 class HeaderNav extends Component {
   render() {
@@ -31,8 +31,8 @@ class HeaderNav extends Component {
       </nav>
 
 
-    )
+    );
   }
 }
 
-export default HeaderNav
+export default HeaderNav;
